@@ -8,7 +8,7 @@ import {
   getDoctorSchedule,
 } from "../controllers/appointmentController.js"
 import { protect } from "../middleware/auth.js"
-import { appointmentValidation, idValidation, validate } from "../middleware/validator.js"
+import { appointmentValidation, idValidation, doctorIdValidation, validate } from "../middleware/validator.js"
 
 const router = express.Router()
 
@@ -16,7 +16,7 @@ router.use(protect)
 
 router.route("/").post(appointmentValidation, validate, createAppointment).get(getAppointments)
 
-router.get("/doctor/:doctorId/schedule", idValidation, validate, getDoctorSchedule)
+router.get("/doctor/:doctorId/schedule", doctorIdValidation, validate, getDoctorSchedule)
 
 router
   .route("/:id")

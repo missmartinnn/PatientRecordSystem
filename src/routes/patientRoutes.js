@@ -7,7 +7,7 @@ import {
   deletePatient,
 } from "../controllers/patientController.js"
 import { protect } from "../middleware/auth.js"
-import { patientValidation, idValidation, validate } from "../middleware/validator.js"
+import { patientValidation, updatePatientValidation, idValidation, validate } from "../middleware/validator.js"
 
 const router = express.Router()
 
@@ -18,7 +18,7 @@ router.route("/").post(patientValidation, validate, createPatient).get(getPatien
 router
   .route("/:id")
   .get(idValidation, validate, getPatient)
-  .put(idValidation, patientValidation, validate, updatePatient)
+  .put(idValidation, updatePatientValidation, validate, updatePatient)
   .delete(idValidation, validate, deletePatient)
 
 export default router

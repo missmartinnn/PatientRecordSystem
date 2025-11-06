@@ -67,3 +67,7 @@ export const appointmentValidation = [
 ]
 
 export const idValidation = [param("id").isMongoId().withMessage("Invalid ID format")]
+
+export const doctorIdValidation = [param("doctorId").isMongoId().withMessage("Invalid doctor ID format")]
+
+export const patientIdValidation = [param("patientId").isMongoId().withMessage("Invalid patient ID format")]
