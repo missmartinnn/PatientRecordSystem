@@ -1,0 +1,38 @@
+{
+  "name": "patient-record-system-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Janice Martin - 22553/2023",
+  "description": "Patient Record System API",
+  "main": "src/server.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint . --ext .js",
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@jest/globals": "^30.2.0",
+    "babel-jest": "^30.2.0",
+    "eslint": "^9.39.1",
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^10.3.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}
